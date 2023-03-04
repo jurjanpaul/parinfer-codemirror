@@ -446,6 +446,9 @@ function fixText(state, changes) {
   var selections = cm.listSelections();
   var cursor = cm.getCursor();
   var scroller = cm.getScrollerElement();
+  
+  console.log("Scroller element:");
+  console.log(scroller);
 
   // Create options
   var options = {
@@ -514,8 +517,9 @@ function fixText(state, changes) {
 
     setTimeout(function(){ state.monitorCursor = true; }, 0);
 
+    // [JPM] skipping this step for now
     // Update scroll position
-    cm.scrollTo(scroller.scrollLeft, scroller.scrollTop);
+    //cm.scrollTo(scroller.scrollLeft, scroller.scrollTop);
   }
 
   // Clear or add new marks
