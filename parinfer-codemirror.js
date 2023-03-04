@@ -446,9 +446,6 @@ function fixText(state, changes) {
   var selections = cm.listSelections();
   var cursor = cm.getCursor();
   var scroller = cm.getScrollerElement();
-  
-  console.log("Scroller element:");
-  console.log(scroller);
 
   // Create options
   var options = {
